@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan 7 - Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Registration Form</h2>
+    <form>
+      <label for="npm">NPM</label>
+      <input type="text" id="npm" name="npm" required>
+
+      <label for="fullname">Fullname</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="placebirth">Place Birth</label>
+      <input type="text" id="placebirth" name="placebirth" required>
+
+      <label for="birthdate">Birthdate</label>
+      <input type="date" id="birthdate" name="birthdate" required>
+
+      <label>Gender</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+      </div>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <div class="button-group">
+        <button type="submit">Save</button>
+        <button type="reset" class="secondary">Clear</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

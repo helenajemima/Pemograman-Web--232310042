@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    border: 2px solid black;
+    padding: 10px;
+}
+.section {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0;
+}
+.career-table {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.career-table .career-block {
+    border: 3px solid rgb(3, 3, 73);
+    padding: 10px;
+    flex: 1;
+    margin: 5px;
+}
+.career-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.career-item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 10px;
+}
+.career-item img {
+    width: 50px;
+    margin-right: 10px;
+}
+.career-item .text {
+    text-align: left;
+    line-height: 2.5;
+}
+.career-item .text2 {
+    text-align: left;
+    line-height: 1.5;
+}
+iframe {
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+}
