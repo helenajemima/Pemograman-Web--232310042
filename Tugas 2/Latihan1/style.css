@@ -1,0 +1,143 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 30px;
+    background-color: #fefefe;
+    color: #222;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #006400;
+    font-size: 28px;
+}
+
+.author {
+    font-size: 14px;
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+}
+
+.elektron {
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-left: 5px solid #00796b;
+    margin-bottom: 20px;
+}
+
+.elektron span {
+    background-color: #74e3d8;
+}
+
+.atom-karbon {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-left: 5px solid #388e3c;
+    margin-bottom: 20px;
+}
+
+.atom-karbon .turquoise-bg {
+    background-color: #74e3d8;
+}
+
+.atom-karbon .green-bg {
+    background-color: rgb(78, 206, 78);
+}
+
+.pink-bg {
+    background-color: pink;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #0077c2;
+    color: white;
+}
+
+table tr:nth-child(2) th {
+    background-color: #3399ff;
+}
+
+.lambang-atom {
+    background-color: #fffde7;
+    padding: 20px;
+    border-left: 5px solid #fbc02d;
+    margin-top: 30px;
+}
+
+.lambang-atom ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lambang-atom li {
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.lambang-atom li strong {
+    font-weight: bold;
+}
+
+.lambang-atom li:nth-child(2) strong {
+    color: #009688; 
+}
+
+.lambang-atom li:nth-child(3) strong {
+    color: #f57c00; 
+}
+
+.lambang-atom li:nth-child(4) strong {
+    color: #d32f2f; 
+}
+
+.social-share {
+    margin-top: 40px;
+}
+
+.social-share p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.social-share .icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-share .icons a i {
+    font-size: 32px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-share .icons a:hover i {
+    transform: scale(1.2);
+}
+
+.social-share .icons a:nth-child(1) i {
+    color: #25D366; 
+}
+.social-share .icons a:nth-child(2) i {
+    color: #1877F2; 
+}
+.social-share .icons a:nth-child(3) i {
+    color: #1DA1F2; 
+}
