@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quadratic Equation Solver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffe6f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff0f5;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+            border: 2px solid #ffb6c1;
+        }
+
+        h2 {
+            text-align: center;
+            color: #d63384;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #b03060;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ffb6c1;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #fffafc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #ff69b4;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e055a0;
+        }
+
+        #output {
+            margin-top: 25px;
+            background: #ffe0ec;
+            padding: 15px;
+            border-left: 5px solid #ff69b4;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #800040;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Quadratic Equation Solver</h2>
+        <p>Masukkan koefisien a, b, dan c dari persamaan <strong>ax² + bx + c = 0</strong>:</p>
+
+        <label for="a">a:</label>
+        <input type="number" id="a" step="any">
+
+        <label for="b">b:</label>
+        <input type="number" id="b" step="any">
+
+        <label for="c">c:</label>
+        <input type="number" id="c" step="any">
+
+        <button onclick="hitungAkar()">Hitung Akar</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function hitungAkar() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
+
+            if (a === 0) {
+                alert("Coefficient 'a' cannot be zero.");
+                return;
+            }
+
+            var D = b * b - 4 * a * c;
+            var hasil = "";
+
+            if (D > 0) {
+                var x1 = (-b + Math.sqrt(D)) / (2 * a);
+                var x2 = (-b - Math.sqrt(D)) / (2 * a);
+                hasil = `Discriminant (D) = ${D}<br><strong>Two real and distinct roots:</strong><br>x₁ = ${x1}<br>x₂ = ${x2}`;
+            } else if (D === 0) {
+                var x = -b / (2 * a);
+                hasil = `Discriminant (D) = 0<br><strong>Two real and equal roots:</strong><br>x = ${x}`;
+            } else {
+                var realPart = (-b / (2 * a)).toFixed(2);
+                var imagPart = (Math.sqrt(-D) / (2 * a)).toFixed(2);
+                hasil = `Discriminant (D) = ${D}<br><strong>Two complex roots:</strong><br>x₁ = ${realPart} + ${imagPart}i<br>x₂ = ${realPart} - ${imagPart}i`;
+            }
+
+            document.getElementById("output").innerHTML = hasil;
+        }
+    </script>
+</body>
+</html>
