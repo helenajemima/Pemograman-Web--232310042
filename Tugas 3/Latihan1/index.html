@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Mahasiswa</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Form Mahasiswa</h2>
+        <form id="mahasiswaForm">
+          <label for="nim">NIM:</label>
+          <input type="text" id="nim" required>
+    
+          <label for="nama">Nama:</label>
+          <input type="text" id="nama" required>
+    
+          <label for="jk">Jenis Kelamin:</label>
+          <select id="jk" required>
+            <option value="">-- Pilih --</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
+    
+          <label for="agama">Agama:</label>
+          <select id="agama" required>
+            <option value="">-- Pilih --</option>
+            <option value="Islam">Islam</option>
+            <option value="Kristen">Kristen</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Buddha">Buddha</option>
+            <option value="Katolik">Katolik</option>
+            <option value="Konghucu">Konghucu</option>
+          </select>
+    
+          <label>Status:</label>
+          <div class="radio-group">
+            <input type="radio" name="status" value="Aktif" required> Aktif
+            <input type="radio" name="status" value="Tidak Aktif"> Tidak Aktif
+          </div>
+    
+          <label for="jurusan">Jurusan:</label>
+          <input type="text" id="jurusan" required>
+    
+          <label for="komentar">Komentar:</label>
+          <textarea id="komentar"></textarea>
+    
+          <button type="button" onclick="proses()">KIRIM</button>
+        </form>
+    
+        <div class="output" id="output"></div>
+      </div>
+    
+      <script>
+        function proses() {
+          const nim = document.getElementById("nim").value;
+          const nama = document.getElementById("nama").value;
+          const jk = document.getElementById("jk").value;
+          const agama = document.getElementById("agama").value;
+          const status = document.querySelector('input[name="status"]:checked')?.value;
+          const jurusan = document.getElementById("jurusan").value;
+          const komentar = document.getElementById("komentar").value;
+    
+          if (!nim || !nama || !jk || !agama || !status || !jurusan) {
+            alert("Harap lengkapi semua field yang wajib diisi!");
+            return;
+          }
+    
+          document.getElementById("output").innerHTML = `
+            <h3>Form Submitted</h3>
+            <p><strong>NIM:</strong> ${nim}</p>
+            <p><strong>Nama:</strong> ${nama}</p>
+            <p><strong>Jenis Kelamin:</strong> ${jk}</p>
+            <p><strong>Agama:</strong> ${agama}</p>
+            <p><strong>Status:</strong> ${status}</p>
+            <p><strong>Jurusan:</strong> ${jurusan}</p>
+            <p><strong>Komentar:</strong> ${komentar}</p>
+          `;
+        }
+      </script>    
+
+</body>
+</html>
